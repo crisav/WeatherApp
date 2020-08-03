@@ -1,0 +1,14 @@
+.nextweather {
+  width: 50vw;
+  height: 50vh;
+  text-align: center;
+  position: relative;
+  &__days {
+    width: 80%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(128, 128, 128, 0.15);
+    border-radius: 20px;
+  }
+}

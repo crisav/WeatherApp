@@ -1,0 +1,71 @@
+.place {
+  width: 50vw;
+  text-align: center;
+  &__container {
+    display: flex;
+    width: 90%;
+    background-color: rgba(128, 128, 128, 0.15);
+    border-radius: 20px;
+    &--img {
+      margin: 10px;
+      width: 30%;
+      height: 230px;
+      border-radius: 20px;
+      background-image: url("https://cdn.pixabay.com/photo/2019/07/21/16/29/paris-4353082_960_720.jpg");
+      background-size: cover;
+      background-position: center;
+      & p {
+        color: white;
+        margin-top: 20px;
+      }
+    }
+    &--cities {
+      width: 70%;
+      margin: auto 0;
+    }
+  }
+}
+
+// .place {
+//   width: 100vh;
+//   text-align: center;
+//   & p {
+//     color: rgb(173, 173, 173);
+//     margin-top: 20px;
+//     font-weight: 800;
+//     font-size: 17px;
+//   }
+//   &__description {
+//     display: flex;
+
+//     &--img {
+//       margin: 15px 20px;
+//       width: 40%;
+//       height: 40vh;
+//       border-radius: 20px;
+//       background-image: url("https://cdn.pixabay.com/photo/2015/04/02/13/18/tower-703776_960_720.jpg");
+//       background-size: cover;
+//       background-position: center;
+//     }
+//     &--details {
+//       & .museum {
+//         margin: 10px 20px;
+//         width: 90%;
+//         height: 10vh;
+//         border-radius: 20px;
+//         background-image: url("https://cdn.pixabay.com/photo/2013/12/16/15/24/art-therapy-229312_960_720.jpg");
+//         background-size: cover;
+//         background-position: center;
+//       }
+//       & .building {
+//         margin: 10px 20px;
+//         width: 20vw;
+//         height: 30vh;
+//         border-radius: 20px;
+//         background-image: url("https://cdn.pixabay.com/photo/2016/08/26/12/44/houses-1622066_960_720.jpg");
+//         background-size: cover;
+//         background-position: center;
+//       }
+//     }
+//   }
+// }
