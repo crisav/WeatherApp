@@ -6,7 +6,7 @@
   align-items: center;
   height: 70px;
   margin: 10px;
-  background-color: #7d68e9;
+  background-color: #8f00ec;
   &__day {
     display: flex;
     align-items: center;
@@ -17,15 +17,16 @@
       display: block;
       & .bold {
         font-weight: 900;
+        color: white;
       }
       & .thin {
         font-weight: 500;
-        color: rgb(75, 75, 75);
+        color: rgb(158, 158, 158);
       }
     }
   }
   &__data {
-    background-color: #342f93;
+    background-color: #460095;
     width: 30%;
     height: 100%;
     border-radius: 20px;

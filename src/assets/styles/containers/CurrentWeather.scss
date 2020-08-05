@@ -15,7 +15,6 @@
     background-position: center;
     & h2 {
       margin: 45px 0 0 100px;
-      color: #342f93;
       font-size: 25px;
       font-weight: 500;
     }
@@ -23,7 +22,7 @@
   &__data {
     width: 100px;
     height: 140px;
-    background-color: #7d68e9;
+    background-color: #8f00ec;
     position: absolute;
     top: 50%;
     left: -20px;
@@ -34,7 +33,7 @@
     &--temperature {
       width: 100%;
       height: 50%;
-      background-color: #342f93;
+      background-color: #460095;
       border-radius: 15%;
       & img {
         margin: -6px 0 0 19px;
