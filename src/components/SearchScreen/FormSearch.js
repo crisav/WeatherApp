@@ -17,13 +17,7 @@ const FormSearch = ({ onLocation, onClose }) => {
       setError('Please enter a valid place (non-empty values).')
       return
     }
-    onLocation((prevState) => {
-      return {
-        ...prevState,
-        city: enteredPlace,
-        searchByCity: true
-      }
-    })
+    onLocation(enteredPlace)
     onClose()
     inputRef.current.value = ''
   }

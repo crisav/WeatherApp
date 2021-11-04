@@ -7,12 +7,9 @@ const CurrentWeather = ({ city, data, onClose, onLocation }) => {
   const handleLocation = () => {
     if ('geolocation' in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        onLocation((prevState) => {
-          return {
-            ...prevState,
-            lat: position.coords.latitude,
-            lng: position.coords.longitude
-          }
+        onLocation({
+          lat: position.coords.latitude,
+          lng: position.coords.longitude
         })
       })
     } else {

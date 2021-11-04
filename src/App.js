@@ -9,18 +9,15 @@ import NextForecasts from './components/NextForecasts/NextForecasts'
 import WeatherCurrentData from './components/WeatherCurrentData/WeatherCurrentData'
 import Spinner from './components/UI/Spinner'
 import Modal from './components/UI/Modal'
-import { useFetch } from './hooks/useFetch'
 import { getPlace } from './helpers/getPlace'
 
 const App = () => {
+  const [fetchState, setFetchState] = useState({ data: null, loading: true })
   const [error, setError] = useState()
   const [close, setClose] = useState(-100)
-  const [locationData, setLocationData] = useState({
-    city: 'Nueva York',
-    lat: 40.7127281,
-    lng: -74.0060152,
-    searchByCity: false
-  })
+  const [locationData, setLocationData] = useState('Nueva York')
+
+  const { data, loading } = fetchState
 
   const handleToggle = () => {
     close === 0 ? setClose(-100) : setClose(0)
@@ -30,41 +27,35 @@ const App = () => {
     setError(null)
   }
 
-  const { lat, lng, city, searchByCity } = locationData
-
   useEffect(() => {
-    const params =
-    searchByCity === true
-      ? city
-      : { lat, lng }
+    setFetchState((prevState) => {
+      return {
+        ...prevState,
+        loading: true
+      }
+    })
 
-    getPlace(params)
-      .then((resp) => {
-        setLocationData({
-          city: resp.city,
-          lat: resp.lat,
-          lng: resp.lng,
-          searchByCity: false
+    getPlace(locationData)
+      .then((data) => {
+        setFetchState({
+          loading: false,
+          data
         })
       })
-      .catch((err) => {
-        console.error(err)
-        setError(`no results for your search: ${city}`)
+      .catch(() => {
+        setFetchState((prevState) => {
+          return {
+            ...prevState,
+            loading: false
+          }
+        })
+        setError(`no results for your search: ${locationData}`)
       })
-  }, [lat, lng, city])
-
-  const url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=hourly&appid=5d96aee95530c282c262bdf38d259718&units=metric`
-
-  const { data, error: dataError, loading } = useFetch(url)
+  }, [locationData])
 
   let content = <Spinner />
 
-  if (dataError) {
-    console.log(dataError)
-    content = <h1>ERROOOOOOOR</h1>
-  }
-
-  if (!dataError && !loading) {
+  if (!loading) {
     content = (
       <main className={styles.main}>
         {error && (
@@ -79,9 +70,8 @@ const App = () => {
           close={close}
         />
         <CurrentWeather
-          location={{ lat, lng }}
           onLocation={setLocationData}
-          city={locationData.city}
+          city={data.city}
           data={data.current}
           onClose={handleToggle}
         />

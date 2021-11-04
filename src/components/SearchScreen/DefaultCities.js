@@ -25,7 +25,6 @@ const CITIES = [
 const DefaultCities = ({ onLocation, onClose }) => {
   const locationUpdateHandler = (place) => {
     onLocation({
-      city: place.city,
       lat: place.lat,
       lng: place.lng
     })

@@ -11,16 +11,24 @@ export const getPlace = async (location) => {
   const coords = await resp.json()
 
   if (coords.results.length === 0) {
-    console.log('errro')
+    console.log('error')
     throw new Error(`No hay resultados para ${location}`)
   }
 
-  const { city } = coords.results[0].components
   const { lat, lng } = coords.results[0].geometry
+  const { city } = coords.results[0].components
+
+  // API openweathermap TO GET WEATHER
+  const API_WATHER = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lng}&exclude=hourly&appid=5d96aee95530c282c262bdf38d259718&units=metric`
+
+  const resp2 = await fetch(API_WATHER)
+  const weather = await resp2.json()
+
+  const { current, daily } = weather
 
   return {
     city,
-    lat,
-    lng
+    current,
+    daily
   }
 }
