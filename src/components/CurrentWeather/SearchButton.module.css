@@ -1,0 +1,18 @@
+.button {
+  height: 100%;
+  background-color: var(--color-grey);
+  color: var(--color-white);
+  transition: all 0.2s;
+  border: none;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+}
+
+.button:active {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+}

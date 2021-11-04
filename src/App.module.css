@@ -1,0 +1,20 @@
+@media only screen and (min-width: 75em) {
+  .main {
+    display: flex;
+  }
+
+  .columns {
+    width: calc(100vw - 35rem);
+    padding: 0 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: var(--secondary-color);
+  }
+}
+
+@media only screen and (min-width: 100em) {
+  .columns {
+    width: calc(100vw - 45rem);
+  }
+};

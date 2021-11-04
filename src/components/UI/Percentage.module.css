@@ -1,0 +1,23 @@
+.percentage {
+  margin: 0 3rem;
+  text-align: end;
+}
+
+.numbers {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.3rem;
+}
+
+.graph {
+  height: 5px;
+  background-color: var(--color-white);
+  border-radius: 5rem;
+  margin: .5rem 0;
+  overflow: hidden;
+}
+
+.sub_graph {
+  background-color: var(--color-yellow);
+  height: 100%;
+}

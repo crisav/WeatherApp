@@ -1,0 +1,21 @@
+.icon {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+  rgba(30, 33, 58, 0.95),
+  rgba(30, 33, 58, 0.95)
+  ),
+  url(../../assets/images/Cloud-background.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.img {
+  width: 60%;
+  max-width: 25rem;
+  min-width: 10rem;
+}

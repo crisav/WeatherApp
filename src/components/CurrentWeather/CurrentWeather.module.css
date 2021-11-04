@@ -1,0 +1,41 @@
+.current-weather {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--primary-color);
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.buttons {
+  display: inherit;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.search {
+  padding: .7rem 2rem;
+  font-size: 1.6rem;
+}
+
+.location {
+  border-radius: 50%;
+  padding: .5rem;
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (min-width: 75em) {
+  .current-weather {
+    width: 35rem;
+  }
+}
+
+@media only screen and (min-width: 100em) {
+  .current-weather {
+    width: 45rem;
+  }
+};

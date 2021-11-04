@@ -1,0 +1,23 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 1.5rem 0;
+  background-color: var(--primary-color);
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.data {
+  font-size: 5rem;
+  font-weight: 700;
+}
+
+.measure {
+  font-size: 2.5rem;
+  font-weight: 500;
+}

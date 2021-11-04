@@ -1,0 +1,41 @@
+.search-screen {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: fixed;
+  z-index: 10;
+  padding: 2rem;
+  text-align: end;
+  transition: .3s;
+}
+
+.button {
+  background-color: transparent;
+  color: var(--color-white);
+  font-size: 2rem;
+  transition: all 0.2s;
+  border: none;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(var(--color-black), 0.2);
+}
+
+.button:active {
+  outline: none;
+  transform: translateY(-1px);
+  box-shadow: 0 0.5rem 1rem rgba(var(--color-black), 0.2);
+}
+
+@media only screen and (min-width: 75em) {
+  .search-screen {
+    width: 35rem;
+  }
+}
+
+@media only screen and (min-width: 100em) {
+  .search-screen {
+    width: 45rem;
+  }
+};

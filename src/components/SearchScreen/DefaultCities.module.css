@@ -1,0 +1,6 @@
+.places {
+  text-align: start;
+  list-style: none;
+  margin-top: 5rem;
+  max-height: 70vh;
+}

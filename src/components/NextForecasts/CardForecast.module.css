@@ -1,0 +1,50 @@
+.card {
+  width: 12rem;
+  height: 17.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--color-white);
+  position: relative;
+  padding: 1rem 0;
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10rem;
+}
+
+.temperature {
+  width: 10rem;
+  display: flex;
+  justify-content: space-around;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.min {
+  color: var(--color-grey-font);
+}
+
+@media only screen and (min-width: 37.5em) {
+  .card {
+    margin: 4rem 0;
+  }
+}
+
+@media only screen and (min-width: 75em) {
+  .card {
+    margin: 0;
+    width: 11rem;
+    height: 15rem;
+  }
+
+  .image {
+    width: 8rem;
+  }
+}

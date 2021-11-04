@@ -1,0 +1,39 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  /* This defines what 1rem is */
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: 'Raleway', sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+:root {
+  --primary-color: #1E213A;
+  --secondary-color: #100E1D;
+
+  --color-grey: #6E707A;
+  --color-grat-placeholder: #616475;
+  --color-grey-font: #A09FB1;
+  --color-white: #E7E7EB;
+  --color-black: #000;
+  --color-yellow: #FFEC65;
+  --color-purple: #3C47E9;
+
+
+  /* FONT */
+  ---default_font-size: 1.6rem;
+}
