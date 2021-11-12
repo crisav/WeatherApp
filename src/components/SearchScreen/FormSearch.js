@@ -14,7 +14,7 @@ const FormSearch = ({ onLocation, onClose }) => {
     event.preventDefault()
     const enteredPlace = inputRef.current.value
     if (enteredPlace.trim().length === 0) {
-      setError('Please enter a valid place (non-empty values).')
+      setError('Please enter a valid location (non-empty values).')
       return
     }
     onLocation(enteredPlace)
