@@ -34,7 +34,7 @@ npm start
 
 ## 📝 License
 
-Copyright © 2019 [Cristian Vega](https://github.com/crisav).<br />
+Copyright © 2021 [Cristian Vega](https://github.com/crisav).<br />
 This project is MIT licensed.
 
 ***
