@@ -4,9 +4,16 @@
 
 ### ✨ [Demo](https://react-weather-app-2.herokuapp.com/)
 
-<img alt="desktop" src="docs/desktop.png" />
+<center>
+  <h2>Desktop version</h2>
+  <img alt="desktop" src="docs/desktop.png" />
+</center>
 
-<img alt="mobile" src="docs/mobile.png" />
+center>
+  <h2>Mobile version</h2>
+  <img alt="mobile" src="docs/mobile.png" />
+</center>
+
 
  The meteorological application created with React JS, connects the opencagedata and openweathermap APIs, to obtain the coordinates and the weather, respectively, it will dynamically render the weather data, in the desktop version you can see the units in celsius or in fahrenheits, either whatever your preference.
  The search form consoults opencagedata  to verify if the user's input corresponds to a valid location.
